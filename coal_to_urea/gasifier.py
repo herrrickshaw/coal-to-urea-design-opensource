@@ -37,7 +37,14 @@ several other recent Indian urea plants), uses Shell's entrained-flow
 gasification process specifically WITH petroleum-coke (petcoke)
 blending as the risk-mitigation strategy for feeding high-ash coal to a
 slagging design (per ICRA's published credit-rating report on the
-project). This module's simple elemental-balance-plus-WGS-equilibrium
+project). Independently confirmed via vendor research (docs/
+VENDOR_REFERENCE.md): Air Products' own materials (having acquired
+Shell's gasification technology and patent portfolio) state "the TFL
+Board approved coal gasification technology of Air Products (earlier
+Shell)" with "coal blended with pet-coke up to 25%" -- a real,
+specific blend ratio ICRA's report did not itself quantify, now
+available if a future version of this module adds an explicit
+coal/petcoke blend-ratio parameter. This module's simple elemental-balance-plus-WGS-equilibrium
 approach is most accurate for entrained-flow, and is a reasonable fit
 for a petcoke-blended feed (lower, more consistent ash than raw high-
 ash coal) or for lower-ash coal generally; for pure high-ash coal fed to

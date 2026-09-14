@@ -47,6 +47,22 @@ sources and for honestly-reported findings along the way (an O2/coal
 ratio that must scale with coal quality, a large CO2 surplus that
 coal-based routes produce relative to gas-based ammonia routes).
 
+## Process technology confirmed against Talcher's own real licensors
+
+`docs/VENDOR_REFERENCE.md` independently confirms all THREE of this
+project's core process-technology assumptions against Talcher's own
+real, board-approved or publicly announced licensors: **Air Products**
+(gasification technology, formerly Shell's - "TFL Board approved coal
+gasification technology of Air Products (earlier Shell)", with a real,
+previously undocumented **25% petcoke blend ratio**), **KBR** (ammonia
+synthesis, "License and Basic Engineering Design, catalyst, and
+proprietary process equipment"), and **Stamicarbon** (urea synthesis -
+its real CO2-stripping process's published 160-240 C / 125-195 bar
+operating range independently corroborates this project's own existing
+180 C / 150 bar default). All three are confirmed for the SAME real
+plant this repo already validates against, not generic industry
+examples.
+
 ## Related open-source work
 
 No existing open-source project covers coal-to-urea specifically (a

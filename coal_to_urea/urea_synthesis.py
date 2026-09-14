@@ -6,7 +6,13 @@ conversion).
 Operating conditions (~150-250 bar, ~170-190 C) are grounded in the
 same public source used for ammonia_synthesis.py: Alkusayer &
 Ollerhead's WPI report states ~180 C / 150 bar for the NH3+CO2
-reaction feeding a urea plant.
+reaction feeding a urea plant. Independently corroborated (docs/
+VENDOR_REFERENCE.md): Stamicarbon's real CO2-stripping process family
+(the actual urea technology reportedly selected for Talcher Fertilizers
+Limited, this module's own validation target) publishes a synthesis-
+reactor range of 160-240 C / 12-21 MPa (125-195 bar preferred) in its
+published process literature -- this module's 180 C / 150 bar default
+sits inside both independently sourced ranges.
 
 Per-pass CO2 conversion correlation: the foundational academic
 reference for urea synthesis equilibrium is Frejacques, C. (1948),
