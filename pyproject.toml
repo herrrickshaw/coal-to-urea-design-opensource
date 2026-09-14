@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coal-to-urea-design-opensource"
+version = "0.1.0"
+description = "Open-source conceptual sizing tools for a coal-gasification-to-urea complex (gasifier, water-gas shift, acid gas removal, air separation, ammonia synthesis, urea synthesis)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "CoolProp>=6.6",
+    "scipy>=1.11",
+    "numpy>=1.24",
+    "streamlit>=1.32",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["coal_to_urea*"]
