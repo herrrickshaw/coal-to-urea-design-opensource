@@ -1,0 +1,4107 @@
+{
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "extracted_sources": [
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/__init__.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/acid_gas_removal.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/air_separation.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/ammonia_synthesis.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/gasifier.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/properties.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/shift_reactor.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/coal_to_urea/urea_synthesis.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/examples/full_chain_worked_example.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/pyproject.toml",
+    "/Users/umashankar/coal-to-urea-design-opensource/streamlit_app.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_acid_gas_removal.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_air_separation.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_ammonia_synthesis.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_gasifier.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_shift_reactor.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/tests/test_urea_synthesis.py",
+    "/Users/umashankar/coal-to-urea-design-opensource/README.md",
+    "/Users/umashankar/coal-to-urea-design-opensource/docs/METHODOLOGY.md",
+    "/Users/umashankar/coal-to-urea-design-opensource/docs/VALIDATION.md"
+  ],
+  "nodes": [
+    {
+      "id": "coal_to_urea_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal",
+      "label": "acid_gas_removal.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_agrresult",
+      "label": "AGRResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "label": "remove_acid_gases()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_absorbersizingresult",
+      "label": "AbsorberSizingResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L100",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "label": "size_agr_column()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L107",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_rationale_1",
+      "label": "Acid gas removal (AGR): strips CO2 and H2S from shifted syngas ahead of ammonia…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_rationale_52",
+      "label": "Mass-balance split of a shifted syngas stream into treated gas (for the ammonia…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L52",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_acid_gas_removal_rationale_120",
+      "label": "Souders-Brown flooding-limited diameter + Kremser theoretical stages x HETP…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L120",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation",
+      "label": "air_separation.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_asuresult",
+      "label": "ASUResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "label": "size_asu_for_n2_demand()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L43",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "label": "size_asu_for_o2_demand()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L73",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_rationale_1",
+      "label": "Cryogenic air separation unit (ASU): produces the O2 the gasifier needs AND the…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_rationale_47",
+      "label": "Size an ASU to meet a target N2 product molar flow, reporting the co-produced…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_air_separation_rationale_77",
+      "label": "Size an ASU to meet a target O2 product molar flow (the gasifier's own demand),…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L77",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis",
+      "label": "ammonia_synthesis.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_ammonialoopresult",
+      "label": "AmmoniaLoopResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L40",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "label": "ammonia_synthesis_loop()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L50",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "label": "validate_feed_ratio()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L92",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "label": "makeup_gas_compressor_power()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L107",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_rationale_1",
+      "label": "Ammonia synthesis (Haber-Bosch): N2 + 3 H2 <-> 2 NH3 over a promoted iron…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_rationale_56",
+      "label": "h2_feed_mol_s/n2_feed_mol_s: fresh makeup gas feed (should be at or near the…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L56",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_rationale_93",
+      "label": "Raises ValueError if the feed departs from the stoichiometric 3:1 H2:N2 ratio…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L93",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_ammonia_synthesis_rationale_112",
+      "label": "Polytropic compression power for the fresh makeup gas train up to loop pressure…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L112",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier",
+      "label": "gasifier.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_coalanalysis",
+      "label": "CoalAnalysis",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L80",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_coalanalysis_post_init",
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L101",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_coalanalysis_hhv_mj_kg",
+      "label": ".hhv_MJ_kg()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L106",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_gasifierresult",
+      "label": "GasifierResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L133",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_wgs_equilibrium_k",
+      "label": "_wgs_equilibrium_K()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L144",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_gasify_coal",
+      "label": "gasify_coal()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L148",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_gasify_coal_residual",
+      "label": "residual()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L215",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_species_mw",
+      "label": "_species_mw()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L261",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_rationale_1",
+      "label": "Coal gasification: elemental mass balance + water-gas-shift equilibrium quench…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_rationale_81",
+      "label": "As-received ultimate analysis, mass fractions summing to 1.0. Two illustrative…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L81",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_rationale_107",
+      "label": "Dulong's formula (as-received mass fractions applied directly - a common…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L107",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_gasifier_rationale_156",
+      "label": "Elemental balance + water-gas-shift equilibrium quench at the gasifier's own…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L156",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties",
+      "label": "properties.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture",
+      "label": "GasMixture",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_post_init",
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_heos_string",
+      "label": "._heos_string()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_molecular_weight",
+      "label": ".molecular_weight()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_prop",
+      "label": ".prop()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_cp_over_cv",
+      "label": ".cp_over_cv()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_compressibility",
+      "label": ".compressibility()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_density",
+      "label": ".density()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L54",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_enthalpy",
+      "label": ".enthalpy()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L57",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_viscosity",
+      "label": ".viscosity()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L60",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_thermal_conductivity",
+      "label": ".thermal_conductivity()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L63",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_gasmixture_specific_heat",
+      "label": ".specific_heat()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_pure_fluid_prop",
+      "label": "pure_fluid_prop()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L70",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_rationale_1",
+      "label": "Thermophysical property helpers built on CoolProp. Same pattern as the sibling…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_rationale_20",
+      "label": "A CoolProp HEOS mixture, keyed by CoolProp fluid names. Example ------- >>>…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_rationale_45",
+      "label": "Generic CoolProp state lookup at (T [K], P [Pa]) for the mixture.",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_properties_rationale_71",
+      "label": "Thin wrapper for CP.PropsSI on a pure fluid, keyword state pairs. e.g.…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor",
+      "label": "shift_reactor.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_wgs_equilibrium_k",
+      "label": "_wgs_equilibrium_K()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_shiftreactorresult",
+      "label": "ShiftReactorResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L43",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_shift_reactor",
+      "label": "shift_reactor()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L50",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_shift_reactor_residual",
+      "label": "residual()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L85",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_rationale_1",
+      "label": "Water-gas shift (WGS) reactor: CO + H2O <-> CO2 + H2. Method: extent-of-…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_rationale_37",
+      "label": "Same correlation as gasifier.py - Moe (1962), widely reproduced in chemical…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_shift_reactor_rationale_57",
+      "label": "Single WGS shift stage. `inlet_composition_mole_frac` must include at least…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis",
+      "label": "urea_synthesis.py",
+      "file_type": "code",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "label": "co2_conversion_per_pass()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_ureasynthesisresult",
+      "label": "UreaSynthesisResult",
+      "file_type": "code",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L57",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "label": "synthesize_urea()",
+      "file_type": "code",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L67",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_rationale_1",
+      "label": "Urea synthesis: 2 NH3 + CO2 <-> NH2COONH4 (ammonium carbamate, fast,…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_rationale_42",
+      "label": "Illustrative, simplified fit to commonly reported urea per-pass CO2 conversion…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L42",
+      "_origin": "ast"
+    },
+    {
+      "id": "coal_to_urea_urea_synthesis_rationale_73",
+      "label": "Single-pass urea reactor mass balance. Pass `conversion_override` to use a…",
+      "file_type": "rationale",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "examples_full_chain_worked_example",
+      "label": "full_chain_worked_example.py",
+      "file_type": "code",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "examples_full_chain_worked_example_rationale_1",
+      "label": "End-to-end worked example: coal -> syngas -> shift -> acid gas removal ->…",
+      "file_type": "rationale",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pkg_coal_to_urea_design_opensource",
+      "label": "coal-to-urea-design-opensource",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast"
+    },
+    {
+      "id": "streamlit_app",
+      "label": "streamlit_app.py",
+      "file_type": "code",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "streamlit_app_rationale_1",
+      "label": "Interactive coal-gasification-to-urea conceptual sizing tool. Run with:…",
+      "file_type": "rationale",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal",
+      "label": "test_acid_gas_removal.py",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal_test_remove_acid_gases_mass_balance_closes",
+      "label": "test_remove_acid_gases_mass_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal_test_remove_acid_gases_captures_expected_co2",
+      "label": "test_remove_acid_gases_captures_expected_co2()",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal_test_remove_acid_gases_rejects_invalid_fraction",
+      "label": "test_remove_acid_gases_rejects_invalid_fraction()",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal_test_size_agr_column_returns_positive_sane_dimensions",
+      "label": "test_size_agr_column_returns_positive_sane_dimensions()",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_acid_gas_removal_test_size_agr_column_rejects_infeasible_absorption_factor",
+      "label": "test_size_agr_column_rejects_infeasible_absorption_factor()",
+      "file_type": "code",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_air_separation",
+      "label": "test_air_separation.py",
+      "file_type": "code",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_air_separation_test_size_asu_for_n2_demand_gives_correct_air_ratio",
+      "label": "test_size_asu_for_n2_demand_gives_correct_air_ratio()",
+      "file_type": "code",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_air_separation_test_size_asu_for_o2_demand_is_consistent_with_n2_framing",
+      "label": "test_size_asu_for_o2_demand_is_consistent_with_n2_framing()",
+      "file_type": "code",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L16",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_air_separation_test_size_asu_rejects_nonpositive_demand",
+      "label": "test_size_asu_rejects_nonpositive_demand()",
+      "file_type": "code",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_air_separation_test_size_asu_power_scales_with_demand",
+      "label": "test_size_asu_power_scales_with_demand()",
+      "file_type": "code",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L32",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis",
+      "label": "test_ammonia_synthesis.py",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_validate_feed_ratio_accepts_stoichiometric_feed",
+      "label": "test_validate_feed_ratio_accepts_stoichiometric_feed()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_validate_feed_ratio_rejects_off_ratio_feed",
+      "label": "test_validate_feed_ratio_rejects_off_ratio_feed()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_ammonia_loop_mass_balance_h2_n2_atoms_conserved",
+      "label": "test_ammonia_loop_mass_balance_h2_n2_atoms_conserved()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_ammonia_loop_overall_conversion_exceeds_single_pass",
+      "label": "test_ammonia_loop_overall_conversion_exceeds_single_pass()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L29",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_ammonia_loop_lower_purge_gives_higher_overall_conversion",
+      "label": "test_ammonia_loop_lower_purge_gives_higher_overall_conversion()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_ammonia_loop_rejects_invalid_inputs",
+      "label": "test_ammonia_loop_rejects_invalid_inputs()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_positive_and_increases_with_ratio",
+      "label": "test_makeup_gas_compressor_power_positive_and_increases_with_ratio()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_rejects_bad_pressure_ordering",
+      "label": "test_makeup_gas_compressor_power_rejects_bad_pressure_ordering()",
+      "file_type": "code",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L55",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier",
+      "label": "test_gasifier.py",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_coal_analysis_rejects_fractions_not_summing_to_one",
+      "label": "test_coal_analysis_rejects_fractions_not_summing_to_one()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_hhv_positive_and_in_plausible_range",
+      "label": "test_hhv_positive_and_in_plausible_range()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_coal_mass_and_mole_balance_closes",
+      "label": "test_gasify_coal_mass_and_mole_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_coal_cold_gas_efficiency_matches_published_range",
+      "label": "test_gasify_coal_cold_gas_efficiency_matches_published_range()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_coal_unscaled_o2_ratio_on_low_carbon_coal_gives_poor_efficiency",
+      "label": "test_gasify_coal_unscaled_o2_ratio_on_low_carbon_coal_gives_poor_efficiency()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_coal_rejects_invalid_carbon_conversion",
+      "label": "test_gasify_coal_rejects_invalid_carbon_conversion()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_coal_higher_o2_ratio_shifts_toward_co2_away_from_co",
+      "label": "test_gasify_coal_higher_o2_ratio_shifts_toward_co2_away_from_co()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L67",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor",
+      "label": "test_shift_reactor.py",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor_test_shift_reactor_mass_balance_closes",
+      "label": "test_shift_reactor_mass_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor_test_shift_reactor_converts_co_to_h2",
+      "label": "test_shift_reactor_converts_co_to_h2()",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor_test_shift_reactor_lower_temperature_gives_higher_equilibrium_conversion",
+      "label": "test_shift_reactor_lower_temperature_gives_higher_equilibrium_conversion()",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor_test_shift_reactor_more_steam_increases_conversion",
+      "label": "test_shift_reactor_more_steam_increases_conversion()",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_shift_reactor_test_shift_reactor_inert_species_pass_through_unchanged_in_absolute_moles",
+      "label": "test_shift_reactor_inert_species_pass_through_unchanged_in_absolute_moles()",
+      "file_type": "code",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis",
+      "label": "test_urea_synthesis.py",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_co2_conversion_rejects_substoichiometric_ratio",
+      "label": "test_co2_conversion_rejects_substoichiometric_ratio()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_co2_conversion_increases_with_nh3_to_co2_ratio",
+      "label": "test_co2_conversion_increases_with_nh3_to_co2_ratio()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_co2_conversion_decreases_with_water_content",
+      "label": "test_co2_conversion_decreases_with_water_content()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_co2_conversion_in_commonly_reported_range_at_typical_ratio",
+      "label": "test_co2_conversion_in_commonly_reported_range_at_typical_ratio()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_synthesize_urea_mass_balance_closes",
+      "label": "test_synthesize_urea_mass_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_synthesize_urea_respects_conversion_override",
+      "label": "test_synthesize_urea_respects_conversion_override()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_synthesize_urea_rejects_infeasible_nh3_shortage",
+      "label": "test_synthesize_urea_rejects_infeasible_nh3_shortage()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_urea_synthesis_test_synthesize_urea_rejects_nonpositive_co2_feed",
+      "label": "test_synthesize_urea_rejects_nonpositive_co2_feed()",
+      "file_type": "code",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L53",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_coal_to_urea_design_opensource",
+      "label": "coal-to-urea-design-opensource",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "Quick start",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_modules",
+      "label": "Modules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_validated_against_a_real_public_project",
+      "label": "Validated against a real public project",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_related_open_source_work",
+      "label": "Related open-source work",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_disclaimer",
+      "label": "Disclaimer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology",
+      "label": "METHODOLOGY.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_methodology",
+      "label": "Methodology",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_gasifier_gasifier_py",
+      "label": "Gasifier (`gasifier.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_water_gas_shift_shift_reactor_py",
+      "label": "Water-gas shift (`shift_reactor.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_acid_gas_removal_acid_gas_removal_py",
+      "label": "Acid gas removal (`acid_gas_removal.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_air_separation_air_separation_py",
+      "label": "Air separation (`air_separation.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_ammonia_synthesis_ammonia_synthesis_py",
+      "label": "Ammonia synthesis (`ammonia_synthesis.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_urea_synthesis_urea_synthesis_py",
+      "label": "Urea synthesis (`urea_synthesis.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L56",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation",
+      "label": "VALIDATION.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_external_validation",
+      "label": "External validation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_a_real_public_project_as_the_validation_benchmark",
+      "label": "A real public project as the validation benchmark",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_gasifier_a_real_finding_o2_ratio_must_scale_with_coal_quality",
+      "label": "Gasifier — a real finding: O2 ratio must scale with coal quality",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_full_chain_worked_example_landed_within_14_of_a_real_plant_and_a_genuine_co2_surplus_finding",
+      "label": "Full-chain worked example — landed within 14% of a real plant, and a genuine CO2-surplus finding",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_what_was_deliberately_not_modeled_in_this_first_pass",
+      "label": "What was deliberately not modeled in this first pass",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L70",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_agrresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "target": "coal_to_urea_acid_gas_removal_agrresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_absorbersizingresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "target": "coal_to_urea_acid_gas_removal_absorbersizingresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "target": "coal_to_urea_acid_gas_removal_agrresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "target": "coal_to_urea_acid_gas_removal_absorbersizingresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_rationale_1",
+      "target": "coal_to_urea_acid_gas_removal",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_rationale_52",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_acid_gas_removal_rationale_120",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/acid_gas_removal.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation",
+      "target": "coal_to_urea_air_separation_asuresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "target": "coal_to_urea_air_separation_asuresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation",
+      "target": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "target": "coal_to_urea_air_separation_asuresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "target": "coal_to_urea_air_separation_asuresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_rationale_1",
+      "target": "coal_to_urea_air_separation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_rationale_47",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_air_separation_rationale_77",
+      "target": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/air_separation.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coolprop_coolprop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_properties",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_ammonialoopresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "target": "coal_to_urea_ammonia_synthesis_ammonialoopresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "target": "coal_to_urea_ammonia_synthesis_ammonialoopresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_rationale_1",
+      "target": "coal_to_urea_ammonia_synthesis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_rationale_56",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_rationale_93",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_rationale_112",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "scipy_optimize",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_coalanalysis",
+      "target": "coal_to_urea_gasifier_coalanalysis_post_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_coalanalysis",
+      "target": "coal_to_urea_gasifier_coalanalysis_hhv_mj_kg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "coal_to_urea_gasifier_gasifierresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "coal_to_urea_gasifier_wgs_equilibrium_k",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_gasifierresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_gasify_coal_residual",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier",
+      "target": "coal_to_urea_gasifier_species_mw",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_wgs_equilibrium_k",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_gasify_coal_residual",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L230",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_species_mw",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_gasify_coal",
+      "target": "coal_to_urea_gasifier_gasifierresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L249",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_rationale_1",
+      "target": "coal_to_urea_gasifier",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_rationale_81",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_rationale_107",
+      "target": "coal_to_urea_gasifier_coalanalysis_hhv_mj_kg",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_gasifier_rationale_156",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/gasifier.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties",
+      "target": "coolprop_coolprop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties",
+      "target": "coal_to_urea_properties_gasmixture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_post_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_heos_string",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_molecular_weight",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_cp_over_cv",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_compressibility",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_density",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_enthalpy",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_viscosity",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_thermal_conductivity",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture",
+      "target": "coal_to_urea_properties_gasmixture_specific_heat",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties",
+      "target": "coal_to_urea_properties_pure_fluid_prop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_molecular_weight",
+      "target": "coal_to_urea_properties_gasmixture_heos_string",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_prop",
+      "target": "coal_to_urea_properties_gasmixture_heos_string",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_cp_over_cv",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_compressibility",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_density",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_enthalpy",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_viscosity",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_thermal_conductivity",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_gasmixture_specific_heat",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_rationale_1",
+      "target": "coal_to_urea_properties",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_rationale_20",
+      "target": "coal_to_urea_properties_gasmixture",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_rationale_45",
+      "target": "coal_to_urea_properties_gasmixture_prop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_properties_rationale_71",
+      "target": "coal_to_urea_properties_pure_fluid_prop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/properties.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "scipy_optimize",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_wgs_equilibrium_k",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shiftreactorresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shiftreactorresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shift_reactor_residual",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_wgs_equilibrium_k",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shift_reactor_residual",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shiftreactorresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_rationale_1",
+      "target": "coal_to_urea_shift_reactor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_rationale_37",
+      "target": "coal_to_urea_shift_reactor_wgs_equilibrium_k",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_shift_reactor_rationale_57",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/shift_reactor.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis_ureasynthesisresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "target": "coal_to_urea_urea_synthesis_ureasynthesisresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "target": "coal_to_urea_urea_synthesis_ureasynthesisresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_rationale_1",
+      "target": "coal_to_urea_urea_synthesis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_rationale_42",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_urea_synthesis_rationale_73",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/urea_synthesis.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_acid_gas_removal",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_air_separation",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_ammonia_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_shift_reactor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_urea_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example_rationale_1",
+      "target": "examples_full_chain_worked_example",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_coal_to_urea_design_opensource",
+      "target": "pkg_coolprop",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_coal_to_urea_design_opensource",
+      "target": "pkg_scipy",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_coal_to_urea_design_opensource",
+      "target": "pkg_numpy",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_coal_to_urea_design_opensource",
+      "target": "pkg_streamlit",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_coal_to_urea_design_opensource",
+      "target": "pkg_pandas",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "streamlit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_acid_gas_removal",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_air_separation",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_ammonia_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_shift_reactor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_urea_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app_rationale_1",
+      "target": "streamlit_app",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "tests_test_acid_gas_removal_test_remove_acid_gases_mass_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "tests_test_acid_gas_removal_test_remove_acid_gases_captures_expected_co2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "tests_test_acid_gas_removal_test_remove_acid_gases_rejects_invalid_fraction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "tests_test_acid_gas_removal_test_size_agr_column_returns_positive_sane_dimensions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "tests_test_acid_gas_removal_test_size_agr_column_rejects_infeasible_absorption_factor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "coal_to_urea_air_separation",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "tests_test_air_separation_test_size_asu_for_n2_demand_gives_correct_air_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "tests_test_air_separation_test_size_asu_for_o2_demand_is_consistent_with_n2_framing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "tests_test_air_separation_test_size_asu_rejects_nonpositive_demand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "tests_test_air_separation_test_size_asu_power_scales_with_demand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_validate_feed_ratio_accepts_stoichiometric_feed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_validate_feed_ratio_rejects_off_ratio_feed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_ammonia_loop_mass_balance_h2_n2_atoms_conserved",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_ammonia_loop_overall_conversion_exceeds_single_pass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_ammonia_loop_lower_purge_gives_higher_overall_conversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_ammonia_loop_rejects_invalid_inputs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_positive_and_increases_with_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_rejects_bad_pressure_ordering",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "coal_to_urea_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_coal_analysis_rejects_fractions_not_summing_to_one",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_hhv_positive_and_in_plausible_range",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_coal_mass_and_mole_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_coal_cold_gas_efficiency_matches_published_range",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_coal_unscaled_o2_ratio_on_low_carbon_coal_gives_poor_efficiency",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_coal_rejects_invalid_carbon_conversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_coal_higher_o2_ratio_shifts_toward_co2_away_from_co",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "coal_to_urea_shift_reactor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "tests_test_shift_reactor_test_shift_reactor_mass_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "tests_test_shift_reactor_test_shift_reactor_converts_co_to_h2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "tests_test_shift_reactor_test_shift_reactor_lower_temperature_gives_higher_equilibrium_conversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "tests_test_shift_reactor_test_shift_reactor_more_steam_increases_conversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "tests_test_shift_reactor_test_shift_reactor_inert_species_pass_through_unchanged_in_absolute_moles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_co2_conversion_rejects_substoichiometric_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_co2_conversion_increases_with_nh3_to_co2_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_co2_conversion_decreases_with_water_content",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_co2_conversion_in_commonly_reported_range_at_typical_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_synthesize_urea_mass_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_synthesize_urea_respects_conversion_override",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_synthesize_urea_rejects_infeasible_nh3_shortage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "tests_test_urea_synthesis_test_synthesize_urea_rejects_nonpositive_co2_feed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_coal_to_urea_design_opensource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_coal_to_urea_design_opensource",
+      "target": "readme_quick_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_coal_to_urea_design_opensource",
+      "target": "readme_modules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_coal_to_urea_design_opensource",
+      "target": "readme_validated_against_a_real_public_project",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_coal_to_urea_design_opensource",
+      "target": "readme_related_open_source_work",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_coal_to_urea_design_opensource",
+      "target": "readme_disclaimer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology",
+      "target": "docs_methodology_methodology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_gasifier_gasifier_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_water_gas_shift_shift_reactor_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_acid_gas_removal_acid_gas_removal_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_air_separation_air_separation_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_ammonia_synthesis_ammonia_synthesis_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_urea_synthesis_urea_synthesis_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation",
+      "target": "docs_validation_external_validation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_a_real_public_project_as_the_validation_benchmark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_gasifier_a_real_finding_o2_ratio_must_scale_with_coal_quality",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_full_chain_worked_example_landed_within_14_of_a_real_plant_and_a_genuine_co2_surplus_finding",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_what_was_deliberately_not_modeled_in_this_first_pass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis",
+      "target": "coal_to_urea_properties_gasmixture",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation",
+      "target": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "target": "coal_to_urea_properties_gasmixture",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal_test_remove_acid_gases_mass_balance_closes",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal_test_remove_acid_gases_captures_expected_co2",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal_test_remove_acid_gases_rejects_invalid_fraction",
+      "target": "coal_to_urea_acid_gas_removal_remove_acid_gases",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal_test_size_agr_column_returns_positive_sane_dimensions",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_acid_gas_removal_test_size_agr_column_rejects_infeasible_absorption_factor",
+      "target": "coal_to_urea_acid_gas_removal_size_agr_column",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_acid_gas_removal.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation_test_size_asu_for_n2_demand_gives_correct_air_ratio",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation_test_size_asu_for_o2_demand_is_consistent_with_n2_framing",
+      "target": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation_test_size_asu_rejects_nonpositive_demand",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation_test_size_asu_rejects_nonpositive_demand",
+      "target": "coal_to_urea_air_separation_size_asu_for_o2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_air_separation_test_size_asu_power_scales_with_demand",
+      "target": "coal_to_urea_air_separation_size_asu_for_n2_demand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_air_separation.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_validate_feed_ratio_accepts_stoichiometric_feed",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_validate_feed_ratio_rejects_off_ratio_feed",
+      "target": "coal_to_urea_ammonia_synthesis_validate_feed_ratio",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_ammonia_loop_mass_balance_h2_n2_atoms_conserved",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_ammonia_loop_overall_conversion_exceeds_single_pass",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_ammonia_loop_lower_purge_gives_higher_overall_conversion",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_ammonia_loop_rejects_invalid_inputs",
+      "target": "coal_to_urea_ammonia_synthesis_ammonia_synthesis_loop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_positive_and_increases_with_ratio",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_ammonia_synthesis_test_makeup_gas_compressor_power_rejects_bad_pressure_ordering",
+      "target": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ammonia_synthesis.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_coal_analysis_rejects_fractions_not_summing_to_one",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_coal_mass_and_mole_balance_closes",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_coal_cold_gas_efficiency_matches_published_range",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_coal_unscaled_o2_ratio_on_low_carbon_coal_gives_poor_efficiency",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_coal_rejects_invalid_carbon_conversion",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_coal_higher_o2_ratio_shifts_toward_co2_away_from_co",
+      "target": "coal_to_urea_gasifier_gasify_coal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor_test_shift_reactor_mass_balance_closes",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor_test_shift_reactor_converts_co_to_h2",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor_test_shift_reactor_lower_temperature_gives_higher_equilibrium_conversion",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor_test_shift_reactor_more_steam_increases_conversion",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_shift_reactor_test_shift_reactor_inert_species_pass_through_unchanged_in_absolute_moles",
+      "target": "coal_to_urea_shift_reactor_shift_reactor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_shift_reactor.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_co2_conversion_rejects_substoichiometric_ratio",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_co2_conversion_increases_with_nh3_to_co2_ratio",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_co2_conversion_decreases_with_water_content",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_co2_conversion_in_commonly_reported_range_at_typical_ratio",
+      "target": "coal_to_urea_urea_synthesis_co2_conversion_per_pass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_synthesize_urea_mass_balance_closes",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_synthesize_urea_respects_conversion_override",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_synthesize_urea_rejects_infeasible_nh3_shortage",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_urea_synthesis_test_synthesize_urea_rejects_nonpositive_co2_feed",
+      "target": "coal_to_urea_urea_synthesis_synthesize_urea",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_urea_synthesis.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "coal_to_urea_ammonia_synthesis_makeup_gas_compressor_power",
+      "target": "coal_to_urea_properties_gasmixture",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "coal_to_urea/ammonia_synthesis.py",
+      "source_location": "L121",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_coal_analysis_rejects_fractions_not_summing_to_one",
+      "target": "coal_to_urea_gasifier_coalanalysis",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}

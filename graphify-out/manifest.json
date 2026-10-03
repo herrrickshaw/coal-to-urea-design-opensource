@@ -1,0 +1,128 @@
+{
+  "coal_to_urea/__init__.py": {
+    "mtime": 1789387485.4313176,
+    "seen": 1789968641.523076,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/acid_gas_removal.py": {
+    "mtime": 1789388084.902756,
+    "seen": 1789968641.523083,
+    "ast_hash": "4005502fbe844c69cc4c9286d9175a5c",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/air_separation.py": {
+    "mtime": 1789388116.510807,
+    "seen": 1789968641.523086,
+    "ast_hash": "0f893efb709b480990090506060f11cf",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/ammonia_synthesis.py": {
+    "mtime": 1789388178.751146,
+    "seen": 1789968641.523088,
+    "ast_hash": "4b5822c5bfb4e1c2fa5c048ee1da0b9b",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/gasifier.py": {
+    "mtime": 1789387900.868587,
+    "seen": 1789968641.5230908,
+    "ast_hash": "23730a37e9c818694abfd5ec5b380509",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/properties.py": {
+    "mtime": 1789387483.009455,
+    "seen": 1789968641.523093,
+    "ast_hash": "f7b8a9a23b929d86df1bd205950da471",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/shift_reactor.py": {
+    "mtime": 1789387979.779926,
+    "seen": 1789968641.5230951,
+    "ast_hash": "89b6807bad250a7ac74e0d305480f5cd",
+    "semantic_hash": ""
+  },
+  "coal_to_urea/urea_synthesis.py": {
+    "mtime": 1789388271.023592,
+    "seen": 1789968641.523097,
+    "ast_hash": "0d2551a939f8109f349b84b080fa2b9b",
+    "semantic_hash": ""
+  },
+  "examples/full_chain_worked_example.py": {
+    "mtime": 1789388348.632277,
+    "seen": 1789968641.523099,
+    "ast_hash": "bccfd514638c5ac0c5b8517e758c661d",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1789387426.082312,
+    "seen": 1789968641.5231009,
+    "ast_hash": "ac64a70d01c72d9b9a1fe6cdbcce6e95",
+    "semantic_hash": ""
+  },
+  "streamlit_app.py": {
+    "mtime": 1789388447.381644,
+    "seen": 1789968641.523103,
+    "ast_hash": "9e39f8d2c9ebadef4bcda473f29023dc",
+    "semantic_hash": ""
+  },
+  "tests/test_acid_gas_removal.py": {
+    "mtime": 1789388094.248402,
+    "seen": 1789968641.523106,
+    "ast_hash": "043172c696ec77b374d6a99f36f01748",
+    "semantic_hash": ""
+  },
+  "tests/test_air_separation.py": {
+    "mtime": 1789388123.198672,
+    "seen": 1789968641.523108,
+    "ast_hash": "06e2245bf898246d726c915cdf444ae1",
+    "semantic_hash": ""
+  },
+  "tests/test_ammonia_synthesis.py": {
+    "mtime": 1789388200.117492,
+    "seen": 1789968641.52311,
+    "ast_hash": "25cd070925622c44955b3751c34b54fd",
+    "semantic_hash": ""
+  },
+  "tests/test_gasifier.py": {
+    "mtime": 1789387916.804041,
+    "seen": 1789968641.5231118,
+    "ast_hash": "93381419f76ed406c3dd192f60fa240c",
+    "semantic_hash": ""
+  },
+  "tests/test_shift_reactor.py": {
+    "mtime": 1789388052.593368,
+    "seen": 1789968641.523114,
+    "ast_hash": "cd8f756aa75f347c0732fb060d29c898",
+    "semantic_hash": ""
+  },
+  "tests/test_urea_synthesis.py": {
+    "mtime": 1789388254.568541,
+    "seen": 1789968641.523117,
+    "ast_hash": "5812a2d0f75de5aa2ab70f1b993e905c",
+    "semantic_hash": ""
+  },
+  ".github/workflows/tests.yml": {
+    "mtime": 1789387431.700165,
+    "seen": 1789968641.5231192,
+    "ast_hash": "176704eb46db27f6260006d1973b0bea",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789388382.554458,
+    "seen": 1789968641.5231209,
+    "ast_hash": "9c52e45b0046130eb65b252fe34ea0df",
+    "semantic_hash": ""
+  },
+  "docs/METHODOLOGY.md": {
+    "mtime": 1789388396.476111,
+    "seen": 1789968641.523123,
+    "ast_hash": "1aed9e4970a8f10041b3934f034f17c8",
+    "semantic_hash": ""
+  },
+  "docs/VALIDATION.md": {
+    "mtime": 1789388415.75542,
+    "seen": 1789968641.523125,
+    "ast_hash": "8a81b2af83399d0d498b899b4d33a34e",
+    "semantic_hash": ""
+  }
+}
