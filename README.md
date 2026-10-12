@@ -1,5 +1,9 @@
 # coal-to-urea-design-opensource
 
+<!-- how-to-use-with-ai -->
+> **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
+
+
 Open-source, literature-grounded conceptual sizing tools for a
 coal-gasification-to-urea complex: gasifier &rarr; water-gas shift
 &rarr; acid gas removal &rarr; air separation &rarr; ammonia synthesis
