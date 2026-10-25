@@ -208,7 +208,8 @@ def gasify_coal(
 
     n_H_total = n_H_atoms_coal + 2.0 * (n_H2O_coal_moisture + n_H2O_steam)
     n_O_total = n_O_atoms_coal + (n_H2O_coal_moisture + n_H2O_steam) + 2.0 * n_O2_fed
-    n_H2eq = n_H_total / 2.0
+    # Sulfur leaves as H2S, which takes 2 H atoms per S out of the H pool.
+    n_H2eq = (n_H_total - 2.0 * n_S_atoms_coal) / 2.0
 
     K = _wgs_equilibrium_K(gasifier_T_K)
 
