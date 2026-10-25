@@ -45,3 +45,19 @@ def test_shift_reactor_inert_species_pass_through_unchanged_in_absolute_moles():
     n2_in_abs = SYNGAS["Nitrogen"] * 1000.0
     n2_out_abs = result.outlet_composition_mole_frac["Nitrogen"] * result.outlet_molar_flow_mol_s
     assert n2_out_abs == pytest.approx(n2_in_abs, rel=1e-6)
+
+
+def test_equimolar_shift_at_unit_K_gives_half_conversion():
+    # K(T) = 1 at T = 4577.8/4.33 K; CO = H2O = 1 mol, no products -> xi^2 = (1-xi)^2 -> xi = 0.5
+    r = shift_reactor({"CarbonMonoxide": 0.5, "Water": 0.5, "CarbonDioxide": 0.0, "Hydrogen": 0.0},
+                      2.0, additional_steam_mol_s=0.0, reactor_T_K=4577.8 / 4.33,
+                      approach_to_equilibrium_K=0.0)
+    assert r.co_conversion == pytest.approx(0.5, rel=1e-6)
+    assert r.outlet_molar_flow_mol_s == pytest.approx(2.0)  # equimolar reaction
+
+
+def test_approach_temperature_lowers_conversion_for_exothermic_shift():
+    inlet = {"CarbonMonoxide": 0.4, "Water": 0.4, "CarbonDioxide": 0.1, "Hydrogen": 0.1}
+    eq = shift_reactor(inlet, 1.0, 0.0, 623.15, approach_to_equilibrium_K=0.0)
+    app = shift_reactor(inlet, 1.0, 0.0, 623.15, approach_to_equilibrium_K=20.0)
+    assert app.co_conversion < eq.co_conversion
