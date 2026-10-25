@@ -45,11 +45,11 @@ almost exactly. Locked in as `tests/test_gasifier.py::test_gasify_coal_
 unscaled_o2_ratio_on_low_carbon_coal_gives_poor_efficiency` and the
 correctly-scaled companion test.
 
-## Full-chain worked example — landed within 14% of a real plant, and a genuine CO2-surplus finding
+## Full-chain worked example — landed within 15% of a real plant, and a genuine CO2-surplus finding
 
 `examples/full_chain_worked_example.py` chains all six modules on the
-Indian high-ash coal basis and produces **1.10 mtpa urea**, vs. Talcher
-Fertilizers Limited's real, public **1.27 mtpa** - a 13.6% gap for a
+Indian high-ash coal basis and produces **1.09 mtpa urea**, vs. Talcher
+Fertilizers Limited's real, public **1.27 mtpa** - a 14.5% gap for a
 first-pass conceptual model built from six independently-simplified
 unit operations (fixed conversions, no recycle/stripping trains sized),
 not tuned to hit this number in advance.

@@ -44,7 +44,7 @@ streamlit run streamlit_app.py                   # interactive app
 
 `examples/full_chain_worked_example.py` chains every module on one
 basis (Indian high-ash coal, per NITI Aayog's 2025 workshop report) and
-lands within **14% of Talcher Fertilizers Limited's real, public 1.27
+lands within **15% of Talcher Fertilizers Limited's real, public 1.27
 mtpa urea capacity** - the same size as several other recently
 commissioned Indian urea plants. See `docs/VALIDATION.md` for the
 sources and for honestly-reported findings along the way (an O2/coal
