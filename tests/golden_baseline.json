@@ -1,0 +1,127 @@
+{
+ "gasifier_indian": {
+  "syngas_composition_mole_frac": {
+   "CarbonMonoxide": 0.4419759734863326,
+   "CarbonDioxide": 0.08960210289890165,
+   "Hydrogen": 0.2285931198968553,
+   "Water": 0.2281561139657156,
+   "HydrogenSulfide": 0.006849111914913145,
+   "Nitrogen": 0.004823577837281699
+  },
+  "syngas_molar_flow_mol_s": 8584.471712010187,
+  "syngas_mass_flow_kg_s": 182.5295371218393,
+  "carbon_conversion": 0.9,
+  "unconverted_carbon_kg_s": 6.089999999999998,
+  "cold_gas_efficiency": 0.6407146272117067,
+  "o2_mass_flow_kg_s": 79.75,
+  "steam_mass_flow_kg_s": 14.5
+ },
+ "gasifier_us": {
+  "syngas_composition_mole_frac": {
+   "CarbonMonoxide": 0.5344067442094069,
+   "CarbonDioxide": 0.06007843765986593,
+   "Hydrogen": 0.25318781905392873,
+   "Water": 0.14013251698706664,
+   "HydrogenSulfide": 0.006992737831079908,
+   "Nitrogen": 0.005201744258651896
+  },
+  "syngas_molar_flow_mol_s": 4460.558462386415,
+  "syngas_mass_flow_kg_s": 93.81327484551701,
+  "carbon_conversion": 0.98,
+  "unconverted_carbon_kg_s": 0.650000000000002,
+  "cold_gas_efficiency": 0.7319092878266226,
+  "o2_mass_flow_kg_s": 42.5,
+  "steam_mass_flow_kg_s": 7.5
+ },
+ "hhv": [
+  17.59435,
+  27.253999999999998
+ ],
+ "shift_ht": {
+  "outlet_composition_mole_frac": {
+   "CarbonMonoxide": 0.0690556683022086,
+   "Water": 0.13534808405558016,
+   "CarbonDioxide": 0.33985054430181777,
+   "Hydrogen": 0.44676671122332057,
+   "HydrogenSulfide": 0.005268547626856266,
+   "Nitrogen": 0.0037104444902166917
+  },
+  "outlet_molar_flow_mol_s": 11159.813225613241,
+  "co_conversion": 0.7968840521245049,
+  "approach_to_equilibrium_K": 20.0
+ },
+ "shift_lt": {
+  "outlet_composition_mole_frac": {
+   "CarbonMonoxide": 0.008861696788736344,
+   "Water": 0.16003662020089227,
+   "CarbonDioxide": 0.3628712237603785,
+   "Hydrogen": 0.46006773914356286,
+   "HydrogenSulfide": 0.004789588751687514,
+   "Nitrogen": 0.003373131354742447
+  },
+  "outlet_molar_flow_mol_s": 12275.794548174566,
+  "co_conversion": 0.8588404586144854,
+  "approach_to_equilibrium_K": 10.0
+ },
+ "agr": {
+  "treated_gas_composition_mole_frac": {
+   "CarbonMonoxide": 0.01377686864896443,
+   "Water": 0.24880150473375653,
+   "CarbonDioxide": 0.016924171427045345,
+   "Hydrogen": 0.7152459582980972,
+   "HydrogenSulfide": 7.446151305744335e-06,
+   "Nitrogen": 0.005244050740830731
+  },
+  "treated_gas_molar_flow_mol_s": 7896.160724078813,
+  "captured_co2_molar_flow_mol_s": 4320.896612617275,
+  "captured_co2_mass_flow_kg_s": 190.1626599212863,
+  "captured_h2s_molar_flow_mol_s": 58.737211478477846,
+  "co2_removal_fraction": 0.97,
+  "h2s_removal_fraction": 0.999
+ },
+ "agr_column": {
+  "diameter_m": 8.639364789102423,
+  "n_theoretical_stages": 7.159066600116486,
+  "packed_height_m": 4.295439960069892,
+  "percent_of_flood": 75.0
+ },
+ "asu_n2": {
+  "n2_product_mass_flow_kg_s": 28.014,
+  "o2_product_mass_flow_kg_s": 8.50579746835443,
+  "air_feed_mass_flow_kg_s": 36.51979746835443,
+  "total_power_kW": 22470.744303797466
+ },
+ "asu_o2": {
+  "n2_product_mass_flow_kg_s": 52.693000000000005,
+  "o2_product_mass_flow_kg_s": 15.999000000000002,
+  "air_feed_mass_flow_kg_s": 68.69200000000002,
+  "total_power_kW": 42266.40000000001
+ },
+ "ammonia": {
+  "nh3_product_mol_s": 3469.325697879775,
+  "nh3_product_mass_flow_kg_s": 59.08608596059044,
+  "fresh_feed_mol_s": 7530.2627252927305,
+  "recycle_mol_s": 28988.955147125955,
+  "reactor_inlet_mol_s": 36519.21787241868,
+  "overall_conversion": 0.9214354995150342,
+  "purge_loss_mol_s": 591.6113295331827
+ },
+ "compressor_kW": 56789.494823887646,
+ "urea_fit": [
+  0.5014,
+  0.42639999999999995,
+  0.584,
+  0.509,
+  0.702,
+  0.627
+ ],
+ "urea": {
+  "urea_produced_mol_s": 578.8817735890824,
+  "urea_produced_mass_flow_kg_s": 34.76763932176029,
+  "water_produced_mol_s": 578.8817735890824,
+  "co2_conversion": 0.584,
+  "unconverted_co2_mol_s": 412.3541400908533,
+  "unconverted_nh3_mol_s": 2311.5621507016103,
+  "nh3_to_co2_molar_ratio": 3.5
+ }
+}
