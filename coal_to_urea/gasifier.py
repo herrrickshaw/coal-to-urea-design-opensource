@@ -153,6 +153,40 @@ class GasifierResult:
 _wgs_equilibrium_K = wgs_equilibrium_K
 
 
+def _solve_syngas_split(n_C: float, n_H2eq: float, n_O_total: float, K: float) -> tuple[float, float, float, float]:
+    """Solve the C/H/O balances + WGS equilibrium for (CO, CO2, H2, H2O) in mol/s.
+
+    n_C: gasified carbon; n_H2eq: total H as H2-equivalents; n_O_total: total O atoms
+    (all mol/s); K: WGS equilibrium constant (dimensionless).
+    """
+    # From C, O, H balances: nCO + nH2 = A, where A = 2*nC + nH2eq - nO.
+    # Combined with WGS equilibrium (nC - nCO)*nH2 = K * nCO * (nH2eq - nH2),
+    # this reduces to one equation in nCO alone, solved numerically (brentq)
+    # since it's a quadratic-like nonlinear relation not worth hand-solving.
+    A = 2.0 * n_C + n_H2eq - n_O_total
+
+    def residual(n_CO: float) -> float:
+        n_H2 = A - n_CO
+        n_CO2 = n_C - n_CO
+        n_H2O = n_H2eq - n_H2
+        return (n_CO2 * n_H2) - K * n_CO * n_H2O
+
+    lo = max(1e-9, A - n_H2eq)  # nCO such that nH2 <= nH2eq (nH2O >= 0)
+    hi = min(n_C, A) - 1e-9      # nCO <= nC (nCO2 >= 0) and nCO <= A (nH2 >= 0)
+    if hi <= lo:
+        raise ValueError(
+            "No physically valid syngas composition for this O2/steam/coal "
+            "ratio combination at the given temperature (elemental balance "
+            "gives no feasible CO/CO2/H2/H2O split) - try a different "
+            "O2-to-coal or steam-to-coal ratio."
+        )
+    n_CO = brentq(residual, lo, hi)
+    n_H2 = A - n_CO
+    n_CO2 = n_C - n_CO
+    n_H2O = n_H2eq - n_H2
+    return n_CO, n_CO2, n_H2, n_H2O
+
+
 def gasify_coal(
     coal: CoalAnalysis,
     coal_mass_flow_kg_s: float,
@@ -211,34 +245,7 @@ def gasify_coal(
     n_O_total = n_O_atoms_coal + (n_H2O_coal_moisture + n_H2O_steam) + 2.0 * n_O2_fed
     n_H2eq = n_H_total / 2.0
 
-    K = _wgs_equilibrium_K(gasifier_T_K)
-
-    # From C, O, H balances (see module derivation): nCO + nH2 = A,
-    # where A = 2*nC + nH2eq - nO. Combined with WGS equilibrium
-    # (nC - nCO)*nH2 = K * nCO * (nH2eq - nH2), this reduces to one
-    # equation in nCO alone, solved numerically (brentq) since it's a
-    # quadratic-like nonlinear relation not worth hand-solving in code.
-    A = 2.0 * n_C + n_H2eq - n_O_total
-
-    def residual(n_CO: float) -> float:
-        n_H2 = A - n_CO
-        n_CO2 = n_C - n_CO
-        n_H2O = n_H2eq - n_H2
-        return (n_CO2 * n_H2) - K * n_CO * n_H2O
-
-    lo = max(1e-9, A - n_H2eq)  # nCO such that nH2 <= nH2eq (nH2O >= 0)
-    hi = min(n_C, A) - 1e-9      # nCO <= nC (nCO2 >= 0) and nCO <= A (nH2 >= 0)
-    if hi <= lo:
-        raise ValueError(
-            "No physically valid syngas composition for this O2/steam/coal "
-            "ratio combination at the given temperature (elemental balance "
-            "gives no feasible CO/CO2/H2/H2O split) - try a different "
-            "O2-to-coal or steam-to-coal ratio."
-        )
-    n_CO = brentq(residual, lo, hi)
-    n_H2 = A - n_CO
-    n_CO2 = n_C - n_CO
-    n_H2O = n_H2eq - n_H2
+    n_CO, n_CO2, n_H2, n_H2O = _solve_syngas_split(n_C, n_H2eq, n_O_total, _wgs_equilibrium_K(gasifier_T_K))
     n_H2S = n_S_atoms_coal
     n_N2 = n_N_atoms_coal / 2.0
 
