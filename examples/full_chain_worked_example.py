@@ -17,15 +17,16 @@ Run: python examples/full_chain_worked_example.py
 """
 from __future__ import annotations
 
-from coal_to_urea.acid_gas_removal import remove_acid_gases
+from coal_to_urea.acid_gas_removal import AGRResult, remove_acid_gases
 from coal_to_urea.air_separation import size_asu_for_n2_demand
 from coal_to_urea.ammonia_synthesis import (
+    AmmoniaLoopResult,
     ammonia_synthesis_loop,
     makeup_gas_compressor_power,
     validate_feed_ratio,
 )
-from coal_to_urea.gasifier import TYPICAL_INDIAN_HIGH_ASH, gasify_coal
-from coal_to_urea.shift_reactor import shift_reactor
+from coal_to_urea.gasifier import TYPICAL_INDIAN_HIGH_ASH, GasifierResult, gasify_coal
+from coal_to_urea.shift_reactor import ShiftReactorResult, shift_reactor
 from coal_to_urea.urea_synthesis import synthesize_urea
 
 MTPA_TO_KG_S = 1.0e9 / (365.25 * 24 * 3600)
@@ -33,17 +34,8 @@ REAL_TALCHER_UREA_MTPA = 1.27  # public benchmark - see module docstring
 
 COAL_MASS_FLOW_KG_S = 145.0   # iterated to land near the real benchmark
 
-def main() -> None:
-    """Run the full coal -> urea chain and print the benchmark comparison."""
-    print("=" * 78)
-    print("COAL-TO-UREA FULL CHAIN WORKED EXAMPLE")
-    print("=" * 78)
-    print(f"Coal feed: {COAL_MASS_FLOW_KG_S:.1f} kg/s, Indian high-ash preset "
-          f"(ash {TYPICAL_INDIAN_HIGH_ASH.ash*100:.0f}%, HHV {TYPICAL_INDIAN_HIGH_ASH.hhv_MJ_kg():.1f} MJ/kg)")
-
-    # ---------------------------------------------------------------------
-    # Gasifier
-    # ---------------------------------------------------------------------
+def _run_gasifier() -> GasifierResult:
+    """Gasify the coal feed and print the syngas summary."""
     g = gasify_coal(
         TYPICAL_INDIAN_HIGH_ASH, COAL_MASS_FLOW_KG_S,
         o2_to_coal_mass_ratio=0.55, steam_to_coal_mass_ratio=0.10,
@@ -52,10 +44,11 @@ def main() -> None:
     print(f"\nGasifier: {g.syngas_molar_flow_mol_s:,.0f} mol/s syngas, "
           f"CGE {g.cold_gas_efficiency*100:.1f}%, O2 feed {g.o2_mass_flow_kg_s:.1f} kg/s")
     print("  Composition:", {k: f"{v*100:.1f}%" for k, v in g.syngas_composition_mole_frac.items()})
+    return g
 
-    # ---------------------------------------------------------------------
-    # Two-stage water-gas shift (HT then LT)
-    # ---------------------------------------------------------------------
+
+def _run_shift(g: GasifierResult) -> tuple[ShiftReactorResult, ShiftReactorResult]:
+    """Two-stage water-gas shift (HT then LT); print conversions."""
     ht = shift_reactor(
         g.syngas_composition_mole_frac, g.syngas_molar_flow_mol_s,
         additional_steam_mol_s=g.syngas_molar_flow_mol_s * 0.30,
@@ -69,21 +62,22 @@ def main() -> None:
     print(f"\nHT shift (350 C): CO conversion {ht.co_conversion*100:.1f}%")
     print(f"LT shift (220 C): CO conversion {lt.co_conversion*100:.1f}% (cumulative), "
           f"H2 mole frac {lt.outlet_composition_mole_frac['Hydrogen']*100:.1f}%")
+    return ht, lt
 
-    # ---------------------------------------------------------------------
-    # Acid gas removal - captured CO2 becomes urea's other feedstock
-    # ---------------------------------------------------------------------
+
+def _run_acid_gas_removal(lt: ShiftReactorResult) -> AGRResult:
+    """Acid gas removal - captured CO2 becomes urea's other feedstock."""
     agr = remove_acid_gases(lt.outlet_composition_mole_frac, lt.outlet_molar_flow_mol_s,
                               co2_removal_fraction=0.97, h2s_removal_fraction=0.999)
     print(f"\nAcid gas removal: {agr.captured_co2_mass_flow_kg_s:.1f} kg/s CO2 captured "
           f"({agr.captured_co2_molar_flow_mol_s:,.0f} mol/s) - urea feedstock")
     print(f"  Treated gas H2 mole frac: {agr.treated_gas_composition_mole_frac['Hydrogen']*100:.1f}% "
           "(methanation polishing needed before the ammonia loop - not modeled here, see module docstring)")
+    return agr
 
-    # ---------------------------------------------------------------------
-    # ASU: N2 makeup for the ammonia loop (sized to the treated gas's own
-    # H2 flow, to hit the stoichiometric 3:1 H2:N2 ratio)
-    # ---------------------------------------------------------------------
+
+def _run_asu_and_feed_check(g: GasifierResult, agr: AGRResult) -> tuple[float, float]:
+    """Size the ASU for N2 makeup (stoichiometric 3:1 H2:N2) and validate the feed ratio."""
     h2_available_mol_s = agr.treated_gas_composition_mole_frac["Hydrogen"] * agr.treated_gas_molar_flow_mol_s
     n2_required_mol_s = h2_available_mol_s / 3.0
     asu = size_asu_for_n2_demand(n2_required_mol_s)
@@ -93,10 +87,11 @@ def main() -> None:
           "typically also serves the gasifier; not the same air feed as this N2-only sizing)")
 
     validate_feed_ratio(h2_available_mol_s, n2_required_mol_s)
+    return h2_available_mol_s, n2_required_mol_s
 
-    # ---------------------------------------------------------------------
-    # Ammonia synthesis loop
-    # ---------------------------------------------------------------------
+
+def _run_ammonia_loop(h2_available_mol_s: float, n2_required_mol_s: float) -> AmmoniaLoopResult:
+    """Ammonia synthesis loop and makeup compressor."""
     nh3 = ammonia_synthesis_loop(h2_available_mol_s, n2_required_mol_s,
                                    single_pass_conversion=0.19, purge_fraction=0.02)
     compressor_power = makeup_gas_compressor_power(h2_available_mol_s, n2_required_mol_s,
@@ -104,10 +99,11 @@ def main() -> None:
     print(f"\nAmmonia synthesis: {nh3.nh3_product_mass_flow_kg_s:,.1f} kg/s NH3 "
           f"({nh3.overall_conversion*100:.1f}% overall conversion), "
           f"makeup compressor {compressor_power:,.0f} kW")
+    return nh3
 
-    # ---------------------------------------------------------------------
-    # Urea synthesis - closes the loop: AGR's CO2 + ammonia loop's NH3.
-    #
+
+def _run_urea(nh3: AmmoniaLoopResult, agr: AGRResult) -> float:
+    """Allocate CO2 to urea at the target N/C, synthesize urea; return mtpa."""
     # Found by running this example, not assumed in advance: coal
     # gasification produces far more carbon (as CO2, after shift) per unit
     # of H2/NH3 than a natural-gas route does - captured CO2 here
@@ -120,7 +116,6 @@ def main() -> None:
     # exactly the CCUS integration need the NITI Aayog workshop report
     # (docs/VALIDATION.md) flags repeatedly for Indian coal gasification
     # projects, not a modeling artifact.
-    # ---------------------------------------------------------------------
     TARGET_N_TO_C_RATIO = 3.5
     co2_needed_for_target_ratio = nh3.nh3_product_mol_s / TARGET_N_TO_C_RATIO
     co2_to_urea = min(co2_needed_for_target_ratio, agr.captured_co2_molar_flow_mol_s)
@@ -136,8 +131,11 @@ def main() -> None:
     print(f"  Urea produced: {urea.urea_produced_mass_flow_kg_s:.1f} kg/s = {urea_mtpa:.2f} mtpa")
     print(f"  Unconverted (recycle/stripping duty, not sized here): "
           f"{urea.unconverted_co2_mol_s:,.0f} mol/s CO2, {urea.unconverted_nh3_mol_s:,.0f} mol/s NH3")
+    return urea_mtpa
 
-    # ---------------------------------------------------------------------
+
+def _print_benchmark_comparison(urea_mtpa: float) -> None:
+    """Compare against the real public Talcher benchmark."""
     print("\n" + "=" * 78)
     print("Comparison against the real public benchmark")
     print("=" * 78)
@@ -155,6 +153,22 @@ def main() -> None:
         "module's docstring and docs/VALIDATION.md for the specific "
         "simplifications and what would need real vendor/kinetic data to remove."
     )
+
+
+def main() -> None:
+    """Run the full coal -> urea chain and print the benchmark comparison."""
+    print("=" * 78)
+    print("COAL-TO-UREA FULL CHAIN WORKED EXAMPLE")
+    print("=" * 78)
+    print(f"Coal feed: {COAL_MASS_FLOW_KG_S:.1f} kg/s, Indian high-ash preset "
+          f"(ash {TYPICAL_INDIAN_HIGH_ASH.ash*100:.0f}%, HHV {TYPICAL_INDIAN_HIGH_ASH.hhv_MJ_kg():.1f} MJ/kg)")
+    g = _run_gasifier()
+    ht, lt = _run_shift(g)
+    agr = _run_acid_gas_removal(lt)
+    h2_available_mol_s, n2_required_mol_s = _run_asu_and_feed_check(g, agr)
+    nh3 = _run_ammonia_loop(h2_available_mol_s, n2_required_mol_s)
+    urea_mtpa = _run_urea(nh3, agr)
+    _print_benchmark_comparison(urea_mtpa)
 
 
 if __name__ == "__main__":

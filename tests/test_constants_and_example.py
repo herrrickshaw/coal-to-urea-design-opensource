@@ -32,3 +32,9 @@ def test_worked_example_runs_and_reports_benchmark_gap(capsys):
     out = capsys.readouterr().out
     assert "Urea produced:" in out
     assert "Difference: -13.6%" in out
+
+
+def test_worked_example_stdout_is_byte_identical_to_golden(capsys):
+    runpy.run_path(str(EXAMPLE), run_name="__main__")
+    golden = (Path(__file__).parent / "golden_example_stdout.txt").read_text()
+    assert capsys.readouterr().out == golden
