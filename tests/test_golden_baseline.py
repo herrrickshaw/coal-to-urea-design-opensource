@@ -22,7 +22,7 @@ def _assert_close(actual, expected, path="root"):
             _assert_close(actual[k], expected[k], f"{path}.{k}")
     elif isinstance(expected, list):
         assert isinstance(actual, list) and len(actual) == len(expected), path
-        for i, (a, e) in enumerate(zip(actual, expected)):
+        for i, (a, e) in enumerate(zip(actual, expected, strict=True)):
             _assert_close(a, e, f"{path}[{i}]")
     elif isinstance(expected, float):
         assert actual == pytest.approx(expected, rel=REL_TOL, abs=1e-12), path
