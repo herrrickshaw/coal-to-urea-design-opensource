@@ -1,0 +1,32 @@
+==============================================================================
+COAL-TO-UREA FULL CHAIN WORKED EXAMPLE
+==============================================================================
+Coal feed: 145.0 kg/s, Indian high-ash preset (ash 35%, HHV 17.6 MJ/kg)
+
+Gasifier: 8,584 mol/s syngas, CGE 64.1%, O2 feed 79.8 kg/s
+  Composition: {'CarbonMonoxide': '44.2%', 'CarbonDioxide': '9.0%', 'Hydrogen': '22.9%', 'Water': '22.8%', 'HydrogenSulfide': '0.7%', 'Nitrogen': '0.5%'}
+
+HT shift (350 C): CO conversion 79.7%
+LT shift (220 C): CO conversion 85.9% (cumulative), H2 mole frac 46.0%
+
+Acid gas removal: 190.2 kg/s CO2 captured (4,321 mol/s) - urea feedstock
+  Treated gas H2 mole frac: 71.5% (methanation polishing needed before the ammonia loop - not modeled here, see module docstring)
+
+ASU: 1,883 mol/s N2 makeup, 42,303 kW, co-produced O2 16.0 kg/s (vs. gasifier's own O2 demand 79.8 kg/s - a separate ASU train typically also serves the gasifier; not the same air feed as this N2-only sizing)
+
+Ammonia synthesis: 59.1 kg/s NH3 (92.1% overall conversion), makeup compressor 56,789 kW
+
+CO2 allocation: 991 mol/s to urea (N/C target 3.5), 3,330 mol/s surplus (77% of captured CO2 - vent or CCUS-capture candidate, not modeled further here)
+
+Urea synthesis: N/C ratio 3.50, per-pass CO2 conversion 58.4%
+  Urea produced: 34.8 kg/s = 1.10 mtpa
+  Unconverted (recycle/stripping duty, not sized here): 412 mol/s CO2, 2,312 mol/s NH3
+
+==============================================================================
+Comparison against the real public benchmark
+==============================================================================
+  This example: 1.10 mtpa urea
+  Talcher Fertilizers Limited (real, public - see docs/VALIDATION.md): 1.27 mtpa urea
+  Difference: -13.6%
+
+Note: this is a conceptual, module-chained estimate using simplified correlations throughout (fixed single-pass conversions, an illustrative urea equilibrium fit, no recycle/stripping/purge-gas-recovery sizing) - landing in the right ballpark of a real plant's capacity is a useful sanity check, not a claim of engineering-grade accuracy. See each module's docstring and docs/VALIDATION.md for the specific simplifications and what would need real vendor/kinetic data to remove.
