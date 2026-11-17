@@ -18,10 +18,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .constants import MW_N2, MW_O2
+
 _AIR_N2_MOLE_FRAC = 0.79
 _AIR_O2_MOLE_FRAC = 0.21
-_MW_N2 = 28.014
-_MW_O2 = 31.998
+_MW_N2 = MW_N2
+_MW_O2 = MW_O2
 
 # Typical published specific power for cryogenic ASU product gas,
 # kWh per Nm3 of product (illustrative range 0.10-0.40 kWh/Nm3

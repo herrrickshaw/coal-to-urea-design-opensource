@@ -9,12 +9,12 @@ from __future__ import annotations
 
 import streamlit as st
 
-from coal_to_urea.acid_gas_removal import remove_acid_gases, size_agr_column
+from coal_to_urea.acid_gas_removal import remove_acid_gases
 from coal_to_urea.air_separation import size_asu_for_n2_demand
 from coal_to_urea.ammonia_synthesis import ammonia_synthesis_loop, makeup_gas_compressor_power
-from coal_to_urea.gasifier import TYPICAL_INDIAN_HIGH_ASH, TYPICAL_US_BITUMINOUS, CoalAnalysis, gasify_coal
+from coal_to_urea.gasifier import TYPICAL_INDIAN_HIGH_ASH, TYPICAL_US_BITUMINOUS, gasify_coal
 from coal_to_urea.shift_reactor import shift_reactor
-from coal_to_urea.urea_synthesis import co2_conversion_per_pass, synthesize_urea
+from coal_to_urea.urea_synthesis import synthesize_urea
 
 st.set_page_config(page_title="Coal-to-Urea Conceptual Sizing", layout="wide")
 st.title("Coal Gasification to Urea (open-source)")

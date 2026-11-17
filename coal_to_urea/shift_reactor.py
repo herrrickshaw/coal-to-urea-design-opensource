@@ -27,16 +27,14 @@ example does.
 """
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 
 from scipy.optimize import brentq
 
+from .constants import wgs_equilibrium_K
 
-def _wgs_equilibrium_K(T_K: float) -> float:
-    """Same correlation as gasifier.py - Moe (1962), widely reproduced
-    in chemical reaction engineering texts (e.g. Fogler)."""
-    return math.exp(4577.8 / T_K - 4.33)
+# Kept as a module-level alias for backward compatibility.
+_wgs_equilibrium_K = wgs_equilibrium_K
 
 
 @dataclass

@@ -31,6 +31,8 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
+from .constants import MW_CO2
+
 
 @dataclass
 class AGRResult:
@@ -89,7 +91,7 @@ def remove_acid_gases(
         treated_gas_composition_mole_frac=treated_composition,
         treated_gas_molar_flow_mol_s=total,
         captured_co2_molar_flow_mol_s=captured_co2,
-        captured_co2_mass_flow_kg_s=captured_co2 * 44.01 / 1000.0,
+        captured_co2_mass_flow_kg_s=captured_co2 * MW_CO2 / 1000.0,
         captured_h2s_molar_flow_mol_s=captured_h2s,
         co2_removal_fraction=co2_removal_fraction,
         h2s_removal_fraction=h2s_removal_fraction,

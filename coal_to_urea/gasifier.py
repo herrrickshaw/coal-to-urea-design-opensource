@@ -67,15 +67,16 @@ for CO + H2O <-> CO2 + H2 (equimolar reaction, so K equals the mole
 """
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 
 from scipy.optimize import brentq
 
+from .constants import MW_CO, MW_CO2, MW_H2, MW_H2O, MW_H2S, MW_N2, MW_O2, wgs_equilibrium_K
+
 # Standard atomic weights, g/mol (IUPAC).
 _AW = {"C": 12.011, "H": 1.008, "O": 15.999, "N": 14.007, "S": 32.06}
-_MW_H2O = 18.015
-_MW_O2 = 31.998
+_MW_H2O = MW_H2O
+_MW_O2 = MW_O2
 
 # Standard higher heating values (HHV, liquid water product), kJ/mol -
 # widely tabulated combustion thermodynamics (e.g. Perry's Chemical
@@ -148,8 +149,42 @@ class GasifierResult:
     steam_mass_flow_kg_s: float
 
 
-def _wgs_equilibrium_K(T_K: float) -> float:
-    return math.exp(4577.8 / T_K - 4.33)
+# Kept as a module-level alias for backward compatibility.
+_wgs_equilibrium_K = wgs_equilibrium_K
+
+
+def _solve_syngas_split(n_C: float, n_H2eq: float, n_O_total: float, K: float) -> tuple[float, float, float, float]:
+    """Solve the C/H/O balances + WGS equilibrium for (CO, CO2, H2, H2O) in mol/s.
+
+    n_C: gasified carbon; n_H2eq: total H as H2-equivalents; n_O_total: total O atoms
+    (all mol/s); K: WGS equilibrium constant (dimensionless).
+    """
+    # From C, O, H balances: nCO + nH2 = A, where A = 2*nC + nH2eq - nO.
+    # Combined with WGS equilibrium (nC - nCO)*nH2 = K * nCO * (nH2eq - nH2),
+    # this reduces to one equation in nCO alone, solved numerically (brentq)
+    # since it's a quadratic-like nonlinear relation not worth hand-solving.
+    A = 2.0 * n_C + n_H2eq - n_O_total
+
+    def residual(n_CO: float) -> float:
+        n_H2 = A - n_CO
+        n_CO2 = n_C - n_CO
+        n_H2O = n_H2eq - n_H2
+        return (n_CO2 * n_H2) - K * n_CO * n_H2O
+
+    lo = max(1e-9, A - n_H2eq)  # nCO such that nH2 <= nH2eq (nH2O >= 0)
+    hi = min(n_C, A) - 1e-9      # nCO <= nC (nCO2 >= 0) and nCO <= A (nH2 >= 0)
+    if hi <= lo:
+        raise ValueError(
+            "No physically valid syngas composition for this O2/steam/coal "
+            "ratio combination at the given temperature (elemental balance "
+            "gives no feasible CO/CO2/H2/H2O split) - try a different "
+            "O2-to-coal or steam-to-coal ratio."
+        )
+    n_CO = brentq(residual, lo, hi)
+    n_H2 = A - n_CO
+    n_CO2 = n_C - n_CO
+    n_H2O = n_H2eq - n_H2
+    return n_CO, n_CO2, n_H2, n_H2O
 
 
 def gasify_coal(
@@ -210,34 +245,7 @@ def gasify_coal(
     n_O_total = n_O_atoms_coal + (n_H2O_coal_moisture + n_H2O_steam) + 2.0 * n_O2_fed
     n_H2eq = n_H_total / 2.0
 
-    K = _wgs_equilibrium_K(gasifier_T_K)
-
-    # From C, O, H balances (see module derivation): nCO + nH2 = A,
-    # where A = 2*nC + nH2eq - nO. Combined with WGS equilibrium
-    # (nC - nCO)*nH2 = K * nCO * (nH2eq - nH2), this reduces to one
-    # equation in nCO alone, solved numerically (brentq) since it's a
-    # quadratic-like nonlinear relation not worth hand-solving in code.
-    A = 2.0 * n_C + n_H2eq - n_O_total
-
-    def residual(n_CO: float) -> float:
-        n_H2 = A - n_CO
-        n_CO2 = n_C - n_CO
-        n_H2O = n_H2eq - n_H2
-        return (n_CO2 * n_H2) - K * n_CO * n_H2O
-
-    lo = max(1e-9, A - n_H2eq)  # nCO such that nH2 <= nH2eq (nH2O >= 0)
-    hi = min(n_C, A) - 1e-9      # nCO <= nC (nCO2 >= 0) and nCO <= A (nH2 >= 0)
-    if hi <= lo:
-        raise ValueError(
-            "No physically valid syngas composition for this O2/steam/coal "
-            "ratio combination at the given temperature (elemental balance "
-            "gives no feasible CO/CO2/H2/H2O split) - try a different "
-            "O2-to-coal or steam-to-coal ratio."
-        )
-    n_CO = brentq(residual, lo, hi)
-    n_H2 = A - n_CO
-    n_CO2 = n_C - n_CO
-    n_H2O = n_H2eq - n_H2
+    n_CO, n_CO2, n_H2, n_H2O = _solve_syngas_split(n_C, n_H2eq, n_O_total, _wgs_equilibrium_K(gasifier_T_K))
     n_H2S = n_S_atoms_coal
     n_N2 = n_N_atoms_coal / 2.0
 
@@ -265,8 +273,12 @@ def gasify_coal(
     )
 
 
+_SPECIES_MW = {
+    "CarbonMonoxide": MW_CO, "CarbonDioxide": MW_CO2, "Hydrogen": MW_H2,
+    "Water": MW_H2O, "HydrogenSulfide": MW_H2S, "Nitrogen": MW_N2,
+}
+
+
 def _species_mw(coolprop_name: str) -> float:
-    return {
-        "CarbonMonoxide": 28.01, "CarbonDioxide": 44.01, "Hydrogen": 2.016,
-        "Water": 18.015, "HydrogenSulfide": 34.08, "Nitrogen": 28.014,
-    }[coolprop_name]
+    """Molecular weight (g/mol) of a CoolProp-named syngas species."""
+    return _SPECIES_MW[coolprop_name]

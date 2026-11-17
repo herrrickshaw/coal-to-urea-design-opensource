@@ -31,8 +31,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
-import CoolProp.CoolProp as CP
-
+from .constants import MW_NH3
 from .properties import R_UNIVERSAL, GasMixture
 
 
@@ -80,7 +79,7 @@ def ammonia_synthesis_loop(
 
     return AmmoniaLoopResult(
         nh3_product_mol_s=nh3_produced,
-        nh3_product_mass_flow_kg_s=nh3_produced * 17.031 / 1000.0,
+        nh3_product_mass_flow_kg_s=nh3_produced * MW_NH3 / 1000.0,
         fresh_feed_mol_s=F,
         recycle_mol_s=R,
         reactor_inlet_mol_s=reactor_inlet,

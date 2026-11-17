@@ -38,10 +38,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-_MW_UREA = 60.06
-_MW_H2O = 18.015
-_MW_NH3 = 17.031
-_MW_CO2 = 44.01
+from .constants import MW_CO2, MW_H2O, MW_NH3, MW_UREA
+
+_MW_UREA = MW_UREA
+_MW_H2O = MW_H2O
+_MW_NH3 = MW_NH3
+_MW_CO2 = MW_CO2
 
 
 def co2_conversion_per_pass(nh3_to_co2_molar_ratio: float, h2o_to_co2_molar_ratio: float = 0.0) -> float:
