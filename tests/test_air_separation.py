@@ -33,3 +33,11 @@ def test_size_asu_power_scales_with_demand():
     small = size_asu_for_n2_demand(500.0)
     large = size_asu_for_n2_demand(1500.0)
     assert large.total_power_kW > small.total_power_kW
+
+
+def test_asu_power_hand_value():
+    # 79 mol/s N2 -> 100 mol/s air -> 21 mol/s O2; products 100 mol/s x 0.022414 Nm3/mol
+    # = 8069.04 Nm3/h x 0.22 kWh/Nm3 = 1775.19 kW
+    r = size_asu_for_n2_demand(79.0)
+    assert r.total_power_kW == pytest.approx(1775.19, rel=1e-5)
+    assert r.o2_product_mass_flow_kg_s == pytest.approx(21 * 31.998 / 1000)

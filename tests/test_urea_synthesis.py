@@ -53,3 +53,15 @@ def test_synthesize_urea_rejects_infeasible_nh3_shortage():
 def test_synthesize_urea_rejects_nonpositive_co2_feed():
     with pytest.raises(ValueError):
         synthesize_urea(1400.0, 0.0)
+
+
+def test_urea_fit_and_balance_hand_values():
+    # illustrative fit 0.171 + 0.118 N/C - 0.15 H2O/C (NOT Frejacques' equilibrium)
+    assert co2_conversion_per_pass(3.5) == pytest.approx(0.584)
+    assert co2_conversion_per_pass(3.5, 0.5) == pytest.approx(0.509)
+    r = synthesize_urea(nh3_feed_mol_s=350.0, co2_feed_mol_s=100.0)
+    assert r.urea_produced_mol_s == pytest.approx(58.4)
+    assert r.urea_produced_mass_flow_kg_s == pytest.approx(58.4 * 60.06 / 1000)
+    assert r.unconverted_nh3_mol_s == pytest.approx(350 - 116.8)
+    # mass: 2 NH3 + CO2 -> urea + H2O
+    assert 2 * 17.031 + 44.01 == pytest.approx(60.06 + 18.015, abs=0.01)
