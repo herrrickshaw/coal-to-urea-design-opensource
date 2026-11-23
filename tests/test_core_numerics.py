@@ -523,3 +523,25 @@ def test_steam_limited_shift_never_consumes_more_water_than_fed():
 def test_shift_without_carbon_monoxide_is_not_solvable():
     with pytest.raises(ValueError):
         SR.shift_reactor({"CarbonMonoxide": 0.0, "Water": 0.5, "CarbonDioxide": 0.25, "Hydrogen": 0.25}, 100.0, 0.0, 700.0)
+
+
+def test_feed_ratio_check_is_inclusive_at_exactly_the_tolerance_edge():
+    # ratio 4.0, tolerance 1/3: |4 - 3| == 3 * (1/3) == 1.0 exactly -> still acceptable
+    NH3.validate_feed_ratio(400.0, 100.0, tolerance=1.0 / 3.0)
+    with pytest.raises(ValueError):
+        NH3.validate_feed_ratio(401.0, 100.0, tolerance=1.0 / 3.0)
+
+
+def test_compressor_power_uses_the_polytropic_efficiency_in_the_exponent(monkeypatch):
+    monkeypatch.setattr(NH3, "GasMixture", _FakeMix)
+    k, eta, pr, T, MW = 1.4, 0.78, 10.0, 300.0, 0.028
+    n = 1.0 / (1.0 - (k - 1.0) / (k * eta))
+    head = (8.314462618 / MW) * T * (n / (n - 1.0)) * (pr ** ((n - 1.0) / n) - 1.0)
+    p = NH3.makeup_gas_compressor_power(75.0, 25.0, T, 1.0e5, 1.0e6, polytropic_efficiency=eta)
+    assert p == pytest.approx(100.0 * MW * head / eta / 1000.0)
+    assert NH3.makeup_gas_compressor_power(75.0, 25.0, T, 1.0e5, 1.0e6) == pytest.approx(p)  # 0.78 is the default
+
+
+def test_gas_mixture_sum_tolerance_rejects_a_1e4_error():
+    with pytest.raises(ValueError, match="sum to 1.0"):
+        P.GasMixture({"Hydrogen": 0.75, "Nitrogen": 0.2501})
