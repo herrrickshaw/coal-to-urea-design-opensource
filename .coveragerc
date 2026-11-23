@@ -1,0 +1,9 @@
+[run]
+source = coal_to_urea
+omit =
+    tests/*
+    */conftest.py
+    */test_*.py
+    docs/*
+    examples/*
+    streamlit_app.py
