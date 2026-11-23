@@ -309,10 +309,12 @@ def test_asu_for_o2_is_the_same_plant_seen_from_the_other_product():
     assert ASU.size_asu_for_o2_demand(21.0, 0.40).total_power_kW == pytest.approx(ref.total_power_kW * 0.40 / 0.22)
 
 
-@pytest.mark.parametrize("fn", [ASU.size_asu_for_n2_demand, ASU.size_asu_for_o2_demand])
+@pytest.mark.parametrize("fn,arg", [(ASU.size_asu_for_n2_demand, "n2_demand_mol_s"),
+                                    (ASU.size_asu_for_o2_demand, "o2_demand_mol_s")])
 @pytest.mark.parametrize("bad", [0.0, -1.0])
-def test_asu_demand_must_be_positive(fn, bad):
-    with pytest.raises(ValueError, match="must be positive"):
+def test_asu_demand_must_be_positive(fn, arg, bad):
+    # the message must name the caller's own argument (the O2 path delegates to the N2 path)
+    with pytest.raises(ValueError, match=f"{arg} must be positive"):
         fn(bad)
 
 
@@ -482,3 +484,42 @@ def test_urea_requires_positive_co2():
     for bad in (0.0, -5.0):
         with pytest.raises(ValueError, match="must be positive"):
             U.synthesize_urea(100.0, bad)
+
+
+# ------------------------------------------------- boundary / survivor tests
+
+
+def test_coal_analysis_sum_tolerance_is_tight():
+    G.CoalAnalysis(0.6, 0.04, 0.08, 0.01, 0.02, 0.15, 0.0999995)   # off by 5e-7: accepted
+    with pytest.raises(ValueError, match="sum to 1.0"):
+        G.CoalAnalysis(0.6, 0.04, 0.08, 0.01, 0.02, 0.15, 0.101)    # off by 1e-3: rejected
+
+
+def test_zero_heating_value_feed_reports_zero_cold_gas_efficiency(monkeypatch):
+    monkeypatch.setattr(G.CoalAnalysis, "hhv_MJ_kg", lambda self: 0.0)
+    assert _gasify_us().cold_gas_efficiency == 0.0
+
+
+def test_shift_default_approach_is_fifteen_kelvin():
+    default = SR.shift_reactor(_wgs_inlet(), 100.0, 30.0, 700.0)
+    explicit = SR.shift_reactor(_wgs_inlet(), 100.0, 30.0, 700.0, approach_to_equilibrium_K=15.0)
+    assert default.approach_to_equilibrium_K == 15.0
+    assert default.co_conversion == pytest.approx(explicit.co_conversion)
+    c = default.outlet_composition_mole_frac
+    q = c["CarbonDioxide"] * c["Hydrogen"] / (c["CarbonMonoxide"] * c["Water"])
+    assert q == pytest.approx(SR._wgs_equilibrium_K(715.0), rel=1e-6)
+
+
+def test_steam_limited_shift_never_consumes_more_water_than_fed():
+    inlet = {"CarbonMonoxide": 0.5, "Water": 0.05, "CarbonDioxide": 0.05, "Hydrogen": 0.4}
+    r = SR.shift_reactor(inlet, 100.0, 0.0, 700.0)
+    out = {k: v * r.outlet_molar_flow_mol_s for k, v in r.outlet_composition_mole_frac.items()}
+    assert 0.0 <= out["Water"] <= 5.0
+    assert out["CarbonMonoxide"] == pytest.approx(50.0 - (5.0 - out["Water"]))
+    assert r.co_conversion == pytest.approx((50.0 - out["CarbonMonoxide"]) / 50.0)
+    assert r.co_conversion < 0.1   # at most 5 of the 50 mol/s CO can react without added steam
+
+
+def test_shift_without_carbon_monoxide_is_not_solvable():
+    with pytest.raises(ValueError):
+        SR.shift_reactor({"CarbonMonoxide": 0.0, "Water": 0.5, "CarbonDioxide": 0.25, "Hydrogen": 0.25}, 100.0, 0.0, 700.0)
