@@ -21,7 +21,7 @@ jobs:
         run: pytest -v --cov=coal_to_urea --cov-report=xml
       - name: Upload coverage
         if: matrix.python-version == '3.12'
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
